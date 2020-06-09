@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+//USAGE OF CORRECT VALUE (PREVSTATE) TO UPDATE THE STATE, INSTEAD OF DIRECTLY MANIPULATING THE CURRENT STATE
+
 const HookCounterTwo = () => {
   const initialCount = 0;
   const [count, setCount] = useState(initialCount);
@@ -9,8 +11,8 @@ const HookCounterTwo = () => {
     }
   };
   return (
-    <div>
-      Count: {count}
+    <div style={{ backgroundColor: "#FBC687" }}>
+      ClassCounterTwo Count is: {count}
       <button onClick={() => setCount(initialCount)}>Reset</button>
       <button onClick={() => setCount((prevCount) => prevCount + 1)}>
         Increment

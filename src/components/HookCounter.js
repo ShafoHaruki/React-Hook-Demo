@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const HookCounter = () => {
   const [count, setCount] = useState(0);
   return (
-    <div>
+    <div style={{ backgroundColor: "#D1EAA3" }}>
       <button onClick={() => setCount(count + 1)}>
         HookCounter Count is {count} (Click to increment)
       </button>

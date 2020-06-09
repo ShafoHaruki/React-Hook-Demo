@@ -17,7 +17,7 @@ class ClassCounter extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: "#D291BC" }}>
         <button onClick={this.incrementCount}>
           ClassCounter Count is {this.state.count} (Click to increment)
         </button>
