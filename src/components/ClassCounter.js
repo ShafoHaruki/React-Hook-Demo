@@ -6,7 +6,19 @@ class ClassCounter extends Component {
 
     this.state = {
       count: 0,
+      name: "",
     };
+  }
+
+  componentDidMount() {
+    document.title = `You clicked ${this.state.count} times.`;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.count !== this.state.count) {
+      console.log("Updating document title...");
+      document.title = `You clicked ${this.state.count} times.`;
+    }
   }
 
   incrementCount = () => {
@@ -18,6 +30,13 @@ class ClassCounter extends Component {
   render() {
     return (
       <div style={{ backgroundColor: "#D291BC" }}>
+        <input
+          type="text"
+          value={this.state.name}
+          onChange={(e) => {
+            this.setState({ name: e.target.value });
+          }}
+        />
         <button onClick={this.incrementCount}>
           ClassCounter Count is {this.state.count} (Click to increment)
         </button>
