@@ -7,7 +7,13 @@ import HookMouse from "./HookMouse";
 const MouseContainer = () => {
   const [display, setDisplay] = useState(true);
   return (
-    <div>
+    <div
+      style={{
+        borderStyle: "solid",
+        borderRadius: "3px",
+        backgroundColor: "#f67280",
+      }}
+    >
       <button onClick={() => setDisplay(!display)}>
         Toggle to display mouse coordinates
       </button>

@@ -15,7 +15,13 @@ const HookCounterFour = () => {
     ]);
   };
   return (
-    <div style={{ backgroundColor: "#f9d89c" }}>
+    <div
+      style={{
+        borderStyle: "solid",
+        borderRadius: "3px",
+        backgroundColor: "#fab7b7",
+      }}
+    >
       <button onClick={addItem}>Add a number</button>
       <ul>
         {items.map((item) => (

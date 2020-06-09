@@ -25,7 +25,13 @@ const HookMouse = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#7d5a5a" }}>
+    <div
+      style={{
+        borderStyle: "solid",
+        borderRadius: "3px",
+        backgroundColor: "#beebe9",
+      }}
+    >
       Hooks X - {x} Y - {y}
     </div>
   );

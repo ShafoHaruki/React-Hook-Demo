@@ -22,7 +22,13 @@ const HookCounterTwo = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#FBC687" }}>
+    <div
+      style={{
+        borderStyle: "solid",
+        borderRadius: "3px",
+        backgroundColor: "#fde2e2",
+      }}
+    >
       <input
         type="text"
         value={name}

@@ -6,7 +6,13 @@ import React, { useState } from "react";
 function HookCounterThree() {
   const [name, setName] = useState({ firstName: "", lastName: "" });
   return (
-    <div style={{ backgroundColor: "#F4EBC1" }}>
+    <div
+      style={{
+        borderStyle: "solid",
+        borderRadius: "3px",
+        backgroundColor: "#efee9d",
+      }}
+    >
       <form>
         <input
           placeholder="FIRST NAME"

@@ -4,27 +4,35 @@ import axios from "axios";
 //DEMO SHOWS HOW TO FETCH DATA WITH USEEFFECT
 
 const DataFetching = () => {
-  const [posts, setPosts] = useState([]);
+  const [post, setPost] = useState({});
+  const [id, setId] = useState(1);
   useEffect(() => {
-    const URL = "https://jsonplaceholder.typicode.com/posts";
+    const URL = `https://jsonplaceholder.typicode.com/posts/${id}`;
     axios
       .get(URL)
       .then((res) => {
-        // console.log(res);
-        setPosts(res.data);
+        setPost(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [id]);
 
   return (
-    <div style={{ backgroundColor: "#fde2e2" }}>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
+    <div
+      style={{
+        borderStyle: "solid",
+        borderRadius: "3px",
+        backgroundColor: "#ffacb7",
+      }}
+    >
+      <input
+        placeholder="input a number to start fetching some API!"
+        type="text"
+        value={id}
+        onChange={(e) => setId(e.target.value)}
+      />
+      <div>{post.title}</div>
     </div>
   );
 };

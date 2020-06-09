@@ -29,7 +29,13 @@ class ClassCounter extends Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: "#D291BC" }}>
+      <div
+        style={{
+          borderStyle: "solid",
+          borderRadius: "3px",
+          backgroundColor: "#ffe0ac",
+        }}
+      >
         <input
           type="text"
           value={this.state.name}
